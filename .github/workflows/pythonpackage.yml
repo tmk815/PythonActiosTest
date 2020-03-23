@@ -40,10 +40,9 @@ jobs:
       uses: pullreminders/slack-action@master
     - if: success()
       with:
-        if: success()
         # "channel"にSlackチャンネルIDを代入
         args: '{\"channel\":\"D010M640HML\", \"text\":\"Success\"}'
-    - if: success()
+    - if: failure()
       with:
         # "channel"にSlackチャンネルIDを代入
         args: '{\"channel\":\"D010M640HML\", \"text\":\"failure\"}'
