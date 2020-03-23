@@ -36,7 +36,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
     - name: Send notification to Slack when master/docs has been updated
-      if: or (failure()) (canceled())
+      if: failure(),canceled()
       uses: pullreminders/slack-action@master
       with:
         # "channel"にSlackチャンネルIDを代入
