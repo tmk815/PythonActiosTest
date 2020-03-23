@@ -36,8 +36,8 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
     - name: Send notification to Slack when master/docs has been updated
-      uses: pullreminders/slack-action@master
       if: failure()
+      uses: pullreminders/slack-action@master
       with:
         # "channel"にSlackチャンネルIDを代入
         args: '{\"channel\":\"D010M640HML\", \"text\":${{ github.event.repository.name }} \"failure\"}'
