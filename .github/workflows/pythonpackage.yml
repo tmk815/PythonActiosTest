@@ -40,6 +40,6 @@ jobs:
       if: success()
       with:
         # "channel"にSlackチャンネルIDを代入
-        args: '{\"channel\":\"D010M640HML\", \"text\":${{ github.event.repository.name }}}'
+        args: '{\"channel\":\"D010M640HML\", \"text\":\"${{ github.event.repository.name }}\"}'
       env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
