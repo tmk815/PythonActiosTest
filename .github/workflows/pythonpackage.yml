@@ -37,9 +37,9 @@ jobs:
 
     - name: Send notification to Slack when master/docs has been updated
       uses: pullreminders/slack-action@master
-      if: success()
+      if: failure()
       with:
         # "channel"にSlackチャンネルIDを代入
-        args: '{\"channel\":\"D010M640HML\", \"text\":\"Success\"}'
+        args: '{\"channel\":\"D010M640HML\", \"text\":\"failure\"}'
       env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
