@@ -41,4 +41,5 @@ jobs:
       with:
         # "channel"にSlackチャンネルIDを代入
         args: '{\"channel\":\"D010M640HML\", \"text\":\"Success\"}'
-      env:  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      env: 
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
