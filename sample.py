@@ -14,7 +14,7 @@ print(digits.target[0])
 
 #サポートベクターマシン（というもの）を使って、分類
 clf = svm.SVC()
-clf.fit(digitsaaa.data,digits.target)
+clf.fit(digits.data,digits.target)
 
 #仮に下記の"test_data"のようなデータは、どの数字に該当するか？を予測
 test_data = [[0,1,2,0,1,2,3,4,0,1,2,0,1,2,3,4,0,1,2,0,1,2,3,4,0,1,2,0,1,2,3,4,0,1,2,0,1,2,3,4,0,1,2,0,1,2,3,4,0,1,2,0,1,2,3,4,0,1,2,0,1,2,3,4]]
