@@ -35,16 +35,9 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     
-    
     - name: Send notification to Slack when master/docs has been updated
       uses: pullreminders/slack-action@master
-    - if: success()
+      if: success()
       with:
         # "channel"にSlackチャンネルIDを代入
         args: '{\"channel\":\"D010M640HML\", \"text\":\"Success\"}'
-    - if: failure()
-      with:
-        # "channel"にSlackチャンネルIDを代入
-        args: '{\"channel\":\"D010M640HML\", \"text\":\"failure\"}'
-      env: 
-        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
